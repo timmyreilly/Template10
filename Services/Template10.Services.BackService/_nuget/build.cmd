@@ -43,7 +43,7 @@ echo Step 1
 if "%NuGetCachePath%"=="" (  
     set NuGetCachePath=%USERPROFILE%\.nuget\packages\
 )
-set NuGetCachePath=%NuGetCachePath%Template10.Controls.ImageEx\
+set NuGetCachePath=%NuGetCachePath%Template10.Controls.BackService\
 
 :clear nuget cache
 if exist "%NuGetCachePath%" (
@@ -166,8 +166,8 @@ set NugetExe="%NugetFolder%nuget.exe"
 echo NuspecFile=%NuspecFile%
 echo NugetExe=%NugetExe%
 
-echo %NugetExe% pack %NuspecFile% -Verbosity normal -OutputDirectory "%WorkingDirectory%" -NonInteractive
-%NugetExe% pack %NuspecFile% -Verbosity normal -OutputDirectory "%WorkingDirectory%" -NonInteractive 
+echo nuget pack %NuspecFile% -Verbosity normal -OutputDirectory "%WorkingDirectory%" -NonInteractive
+nuget pack %NuspecFile% -Verbosity normal -OutputDirectory "%WorkingDirectory%" -NonInteractive 
 
 echo.
 echo Step 10

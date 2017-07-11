@@ -4,13 +4,13 @@
 
     <version>1.0.0-preview</version>
 
-    <id>Template10.Services.KeyboardService</id>
+    <id>Template10.Services.BackService</id>
 
-    <title>Template10.Services.KeyboardService</title>
+    <title>Template10.Services.BackService</title>
 
     <authors>Windows developers</authors>
 
-    <owners>jerrynixon, timmyreilly, darenmay</owners>
+    <owners>jerrynixon, timreilly, darenmay</owners>
 
     <licenseUrl>http://aka.ms/Template10-License</licenseUrl>
 
@@ -22,7 +22,7 @@
 
     <description>
       <![CDATA[
-        Keyboard service is used to easily handle keyboard interaction. 
+        BackButtonService is used to easily handle going backwards. 
       ]]>
     </description>
 

@@ -35,6 +35,7 @@
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -112,13 +113,9 @@
     <EmbeddedResource Include="Properties\Template10.Services.BackButton.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Helpers\Template10.CodeBehind\Template10.CodeBehind.csproj">
+    <ProjectReference Include="..\..\..\Helpers\Template10.CodeBehind\Template10.CodeBehind.csproj">
       <Project>{b3a4e50e-9dca-457e-bed5-b71d97b957f3}</Project>
       <Name>Template10.CodeBehind</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Template10.Services.KeyboardService\Service\Template10.Services.KeyboardService.csproj">
-      <Project>{b540d0b5-3850-416f-aec7-7737870e9ca2}</Project>
-      <Name>Template10.Services.KeyboardService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
