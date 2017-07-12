@@ -128,7 +128,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_nuget", "_nuget", "{F79E27
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template10.Services.BackService", "Services\Template10.Services.BackService\Service\Template10.Services.BackService.csproj", "{8564F764-99D9-4473-B5E4-AC62CDA73977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackServiceDemoApp", "Services\Template10.Services.BackService\Demo\BackServiceDemoApp\BackServiceDemoApp.csproj", "{372CCABD-EE59-4863-AC87-9DB6DC44ABA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackServiceDemoApp", "Services\Template10.Services.BackService\Demo\BackServiceDemoApp.csproj", "{372CCABD-EE59-4863-AC87-9DB6DC44ABA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

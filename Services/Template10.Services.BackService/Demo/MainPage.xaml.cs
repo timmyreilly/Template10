@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Template10.Services.BackButtonService;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,16 @@ namespace BackServiceDemoApp
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEvent args)
+        {
+           
+        }
+
+        private void AboutPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AboutPage));
         }
     }
 }
