@@ -30,12 +30,27 @@ namespace BackServiceDemoApp
 
         private void MainPage_Loaded(object sender, RoutedEvent args)
         {
-           
+            ShellVisible = true;
+            var service = BackButtonService.Instance; 
+            service.BeforeBackRequested += (s, e) => MyListView.Items.Insert(0, "Before Back Requested");
+            service.BackRequested += (s, e) => MyListView.Items.Insert(0, "Back Requested");
+            service.BeforeForwardRequested += (s, e) => MyListView.Items.Insert(0, "Before Forward Requested");
+            service.ForwardRequested += (s, e) => MyListView.Items.Insert(0, "Forward Requested");
+            service.BackButtonUpdated += (s, e) => MyListView.Items.Insert(0, "Back button updated"); 
         }
-
-        private void AboutPageButton_Click(object sender, RoutedEventArgs e)
+        
+        public bool ShellVisible
         {
-            Frame.Navigate(typeof(AboutPage));
+            get { return (bool)GetValue(ShellVisibleProperty); }
+            set { SetValue(ShellVisibleProperty, value); }
+        }
+        public static readonly DependencyProperty ShellVisibleProperty =
+            DependencyProperty.Register(nameof(ShellVisible), typeof(bool), 
+                typeof(MainPage), new PropertyMetadata(false, ShellVisibleChanged));
+        private static void ShellVisibleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var b = (bool)e.NewValue;
+            Template10.Services.BackButtonService.Settings.ShowShellBackButton = b; // "hmmm" - Jerry Nixon
         }
     }
 }

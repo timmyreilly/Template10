@@ -8,6 +8,25 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="AboutPageButton" Content="About" Click="AboutPageButton_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView x:Name="MyListView" Grid.Row="1">
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition IsStaggeringEnabled="False" />
+                    <!-- Change this 2 true! -->
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
+        </ListView>
+        <Rectangle Fill="CornflowerBlue"></Rectangle>
+        <StackPanel Grid.Row="0" Margin="16">
+            <TextBlock Style="{StaticResource SubheaderTextBlockStyle}">BackService Demo App</TextBlock>
+            <TextBlock Style="{StaticResource CaptionTextBlockStyle}">
+                Hit: back button in shell (titlebar), back button on canvas, windows key + backspace, alt key + left arrow, mouse back button, alt key + backspace, keyboard navigation left, touch pad two finger swipe right, game pad left bumper,  
+            </TextBlock>
+            <ToggleSwitch OnContent="Visible in shell" OffContent="Visible on canvas" IsOn="{x:Bind ShellVisible,Mode=TwoWay}"></ToggleSwitch>
+        </StackPanel>
     </Grid>
 </Page>
