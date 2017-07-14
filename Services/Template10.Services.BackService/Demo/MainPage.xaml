@@ -24,7 +24,7 @@
         <StackPanel Grid.Row="0" Margin="16">
             <TextBlock Style="{StaticResource SubheaderTextBlockStyle}">BackService Demo App</TextBlock>
             <TextBlock Style="{StaticResource CaptionTextBlockStyle}">
-                Try: back button in shell (titlebar), back button on canvas, windows key + backspace, alt key + left arrow, mouse back button, alt key + backspace, keyboard navigation left, touch pad two finger swipe right, game pad left bumper,  
+                Hit: back button in shell (titlebar), back button on canvas, windows key + backspace, alt key + left arrow, mouse back button, alt key + backspace, keyboard navigation left, touch pad two finger swipe right, game pad left bumper,  
             </TextBlock>
             <ToggleSwitch OnContent="Visible in shell" OffContent="Visible on canvas" IsOn="{x:Bind ShellVisible,Mode=TwoWay}"></ToggleSwitch>
         </StackPanel>
